@@ -1,2 +1,17 @@
 .root {
+  padding: 6rem 0rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.subtitle {
+  font-weight: 500;
+  font-size: 1.5rem;
 }
