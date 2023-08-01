@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import styles from './intro.module.scss';
+import { Animation } from '../animation/animation';
 
 export interface IntroProps {
     className?: string;
@@ -27,6 +28,7 @@ export const Intro = ({ className }: IntroProps) => {
                         stroke="url(#paint0_linear_6_519)"
                         stroke-width="3"
                         stroke-linecap="round"
+                        className={styles['path-line']}
                     />
                     <defs>
                         <linearGradient
@@ -42,9 +44,10 @@ export const Intro = ({ className }: IntroProps) => {
                         </linearGradient>
                     </defs>
                 </svg>
-                <p>Creative Front-End Web Developer</p>
-                <button>Let&apos;s get in touch 🥱</button>
+                <p className={styles.p}>Creative Front-End Web Developer</p>
+                <button className={styles.cta}>Let&apos;s get in touch 🥱</button>
             </div>
+            <Animation />
         </div>
     );
 };
