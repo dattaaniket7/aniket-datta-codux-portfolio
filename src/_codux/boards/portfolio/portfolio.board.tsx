@@ -3,5 +3,9 @@ import { Portfolio } from '../../../components/portfolio/portfolio';
 
 export default createBoard({
     name: 'Portfolio',
-    Board: () => <Portfolio />
+    Board: () => <Portfolio />,
+    environmentProps: {
+        windowWidth: 1186,
+        canvasWidth: 1331,
+    },
 });

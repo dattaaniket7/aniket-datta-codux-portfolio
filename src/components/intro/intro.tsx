@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import styles from './intro.module.scss';
 import { Animation } from '../animation/animation';
+import { motion } from 'framer-motion';
+import { Portfolio } from '../portfolio/portfolio';
 
 export interface IntroProps {
     className?: string;
@@ -15,19 +17,21 @@ export const Intro = ({ className }: IntroProps) => {
         <div className={classNames(styles.root, className)}>
             <div>
                 <h2 className={styles.title}>Aniket Datta</h2>
-                <h3 className={styles.subtitle}>Software Developer</h3>
-                <svg
+                <h3 className={styles.h3}>Software Developer</h3>
+                <motion.svg
                     height="4"
                     viewBox="0 0 204 4"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={styles.line}
                 >
-                    <path
+                    <motion.path
                         d="M2 2L202 1.99998"
                         stroke="url(#paint0_linear_6_519)"
                         stroke-width="3"
                         stroke-linecap="round"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 1 }}
                         className={styles['path-line']}
                     />
                     <defs>
@@ -43,11 +47,12 @@ export const Intro = ({ className }: IntroProps) => {
                             <stop offset="1" stop-color="#DC3232" />
                         </linearGradient>
                     </defs>
-                </svg>
+                </motion.svg>
                 <p className={styles.p}>Creative Front-End Web Developer</p>
                 <button className={styles.cta}>Let&apos;s get in touch 🥱</button>
             </div>
             <Animation />
+            <Portfolio />
         </div>
     );
 };
