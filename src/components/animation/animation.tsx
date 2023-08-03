@@ -20,7 +20,7 @@ export const Animation = ({ className }: AnimationProps) => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
             >
-                <Lottie animationData={hand} />
+                <Lottie animationData={hand} className={styles.hand} />
             </motion.div>
         </div>
     );

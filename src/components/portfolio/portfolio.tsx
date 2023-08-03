@@ -24,7 +24,7 @@ export const Portfolio = ({ className }: PortfolioProps) => {
                     viewBox="0 0 204 4"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className={styles.line}
+                    className={classNames(styles.line, styles.path)}
                 >
                     <motion.path
                         d="M2 2L202 1.99998"
@@ -58,39 +58,39 @@ export const Portfolio = ({ className }: PortfolioProps) => {
                 <span className={styles.span}>creative thinker</span> and I am always looking for
                 new ways to solve problems.
             </p>
-            <p className={styles.p} />
+            <p className={styles.p}></p>
             <div className={styles.grid}>
-                <div className={styles['grid-item']}>
+                <motion.div className={styles['grid-item']}>
                     <img src={website_1} className={styles['grid-img']} />
                     <div className={styles['visit-portofolio']}>
                         <h4 className={styles.h4}>Buzz - Full Stack Next 13</h4>
                         <a href="/">Visit</a>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className={styles['grid-item']}>
+                <motion.div className={styles['grid-item']}>
                     <img src={website_2} className={styles['grid-img']} />
                     <div className={styles['visit-portofolio']}>
                         <h4 className={styles.h4}>E-commerce with Stripe</h4>
                         <a href="/">Visit</a>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className={styles['grid-item']}>
+                <motion.div className={styles['grid-item']}>
                     <img src={website_3} className={styles['grid-img']} />
                     <div className={styles['visit-portofolio']}>
                         <h4 className={styles.h4}>3d Animations with Blender</h4>
                         <a href="/">Visit</a>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className={styles['grid-item']}>
+                <motion.div className={styles['grid-item']}>
                     <img src={website_4} className={styles['grid-img']} />
                     <div className={styles['visit-portofolio']}>
                         <h4 className={styles.h4}>Hua Portofolio</h4>
                         <a href="/">Visit</a>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className={styles.socials}>
                 <a href="https://www.linkedin.com/in/dev-ed-6a045420b/">

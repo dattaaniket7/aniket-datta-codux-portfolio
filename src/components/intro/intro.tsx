@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import styles from './intro.module.scss';
 import { Animation } from '../animation/animation';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Portfolio } from '../portfolio/portfolio';
 
 export interface IntroProps {
@@ -15,9 +16,23 @@ export interface IntroProps {
 export const Intro = ({ className }: IntroProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <div>
-                <h2 className={styles.title}>Aniket Datta</h2>
-                <h3 className={styles.h3}>Software Developer</h3>
+            <div className={styles['intro-title']}>
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className={styles.title}
+                >
+                    Aniket Datta
+                </motion.h2>
+                <motion.h3
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className={styles.h3}
+                >
+                    Software Developer
+                </motion.h3>
                 <motion.svg
                     height="4"
                     viewBox="0 0 204 4"
@@ -48,7 +63,7 @@ export const Intro = ({ className }: IntroProps) => {
                         </linearGradient>
                     </defs>
                 </motion.svg>
-                <p className={styles.p}>Creative Front-End Web Developer</p>
+                <p className={styles.p}>Creative Front-End Web Developer. </p>
                 <button className={styles.cta}>Let&apos;s get in touch 🥱</button>
             </div>
             <Animation />
