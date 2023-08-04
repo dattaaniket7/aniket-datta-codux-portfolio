@@ -31,19 +31,16 @@ export const Contact = ({ className }: ContactProps) => {
     };
 
     // Form Submit function
-    const formSubmit = async (e) => {
+    const formSubmit = (e: any) => {
         e.preventDefault();
         const formData = new FormData();
         Object.entries(query).forEach(([key, value]) => {
             formData.append(key, value);
         });
-        const submitForm = await fetch(
-            'https://getform.io/f/8a3e3f67-0fb6-422f-a22d-b3172adb3333',
-            {
-                method: 'POST',
-                body: formData,
-            }
-        ).then(() => {
+        fetch('https://getform.io/f/8a3e3f67-0fb6-422f-a22d-b3172adb3333', {
+            method: 'POST',
+            body: formData,
+        }).then(() => {
             setQuery({ name: '', email: '', message: '' });
             setSubmitted(true);
         });
@@ -52,8 +49,12 @@ export const Contact = ({ className }: ContactProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             {submitted && (
-                <div>
-                    <Lottie animationData={formAnimation} loop={false} />
+                <div className={styles['animation-wrapper']}>
+                    <Lottie
+                        animationData={formAnimation}
+                        loop={false}
+                        className={styles['form-animation']}
+                    />
                 </div>
             )}
             {!submitted && (

@@ -1,10 +1,46 @@
 .root {
+  padding: 4rem 0rem;
+  max-width: 100%;
+  text-align: start;
+  display: block;
+  align-items: center;
+  justify-items: center;
+  background-color: transparent;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .form-title {
+  padding: 1rem 0rem;
 }
 .form {
+  display: flex;
+  flex-direction: column;
+  gap: 0em;
 }
 .label {
+  font-size: 1rem;
+  font-weight: 500;
 }
 .input {
+  padding: 6px 4px;
+  font-size: 1rem;
+  margin: 0em 0em 1.5em;
+}
+.submit {
+  background-color: #b058ff;
+  padding-top: 0.5em;
+  color: #ffffff;
+  font-weight: 600;
+}
+.form-animation {
+  max-width: 24rem;
+}
+.animation-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  background-color: transparent;
+  flex-direction: column;
 }
