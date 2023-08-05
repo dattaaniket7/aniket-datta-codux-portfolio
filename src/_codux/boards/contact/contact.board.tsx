@@ -3,5 +3,10 @@ import { Contact } from '../../../components/contact/contact';
 
 export default createBoard({
     name: 'Contact',
-    Board: () => <Contact />
+    Board: () => <Contact />,
+    environmentProps: {
+        windowWidth: 942,
+        canvasWidth: 525,
+        windowHeight: 729,
+    },
 });
