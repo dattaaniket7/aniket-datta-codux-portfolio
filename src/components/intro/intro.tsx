@@ -3,7 +3,6 @@ import styles from './intro.module.scss';
 import { Animation } from '../animation/animation';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Portfolio } from '../portfolio/portfolio';
 
 export interface IntroProps {
     className?: string;
@@ -64,10 +63,11 @@ export const Intro = ({ className }: IntroProps) => {
                     </defs>
                 </motion.svg>
                 <p className={styles.p}>Creative Front-End Web Developer. </p>
-                <button className={styles.cta}>Let&apos;s get in touch 🥱</button>
+                <Link to={'/contact'}>
+                    <button className={styles.cta}>Let's collaborate 🎉</button>
+                </Link>
+                <Animation />
             </div>
-            <Animation />
-            <Portfolio />
         </div>
     );
 };

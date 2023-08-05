@@ -4,7 +4,4 @@ import { Intro } from '../../../components/intro/intro';
 export default createBoard({
     name: 'Intro',
     Board: () => <Intro />,
-    environmentProps: {
-        canvasHeight: 1836,
-    },
 });

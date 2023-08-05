@@ -17,7 +17,7 @@ export interface PortfolioProps {
 export const Portfolio = ({ className }: PortfolioProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <div className={styles['portfolio-wrapper']}>
+            <div className={styles['portofolio-wrapper']}>
                 <h3 className={styles.h3}>My Portfolio</h3>
                 <motion.svg
                     height="4"

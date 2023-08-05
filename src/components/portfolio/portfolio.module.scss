@@ -1,9 +1,11 @@
 .root {
   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
   display: block;
-  justify-content: start;
+  justify-content: center;
   padding: 2rem 0rem;
   gap: 2em;
+}
+.h2 {
 }
 .p {
   padding: 0.5rem 0rem;
@@ -59,7 +61,15 @@
 .path {
   stroke-width: 3;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
 }
+
 .socials {
   padding-top: 4rem;
   padding-bottom: 2rem;
